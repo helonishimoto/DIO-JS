@@ -1,12 +1,12 @@
 class ContaBancaria {
-    constructor (agencia, numero, tipo) {
+    constructor(agencia, numero, tipo) {
         this.agencia = agencia;
         this.numero = numero;
         this.tipo = tipo;
         this._saldo = 0;
     }
 
-    sacar (valor) {
+    sacar(valor) {
         if (valor > this._saldo) {
             return console.log("Não é possível sacar o valor. Valor insuficiente na conta!")
         }
@@ -15,51 +15,51 @@ class ContaBancaria {
         return this._saldo;
     }
 
-    depositar (valor) {
+    depositar(valor) {
         this._saldo = this._saldo + valor;
         return this._saldo;
     }
 
-    get saldo () {
+    get saldo() {
         return this._saldo;
     }
 
-    set saldo (valor) {
+    set saldo(valor) {
         this._saldo = valor;
     }
 }
 
 class ContaCorrente extends ContaBancaria {
-    constructor (agencia, numero, cartaoCredito) {
-        super (agencia, numero);
+    constructor(agencia, numero, cartaoCredito) {
+        super(agencia, numero);
         this.tipo = "corrente";
         this._cartaoCredito = cartaoCredito;
     }
 
-    get cartaoCredito () {
+    get cartaoCredito() {
         return this._cartaoCredito;
     }
 
-    set cartaoCredito (valor) {
+    set cartaoCredito(valor) {
         this._cartaoCredito = valor;
     }
 }
 
 class ContaPoupanca extends ContaBancaria {
-    constructor (agencia, numero) {
-        super (agencia, numero);
+    constructor(agencia, numero) {
+        super(agencia, numero);
         this.tipo = "poupança";
     }
 }
 
 class ContaUniversitaria extends ContaBancaria {
-    constructor (agencia, numero) {
-        super (agencia, numero);
+    constructor(agencia, numero) {
+        super(agencia, numero);
         this.tipo = "universitária";
     }
 
-    sacar (valor) {
-        if (valor > 500 || valor > this._saldo){
+    sacar(valor) {
+        if (valor > 500 || valor > this._saldo) {
             return "Operação negada";
         }
 
@@ -68,6 +68,6 @@ class ContaUniversitaria extends ContaBancaria {
     }
 }
 
-const minhaConta = new ContaCorrente (111, 292, true);
-const contaUni = new ContaUniversitaria (23, 595);
-const contaPoup = new ContaPoupanca (1, 22);
+const minhaConta = new ContaCorrente(111, 292, true);
+const contaUni = new ContaUniversitaria(23, 595);
+const contaPoup = new ContaPoupanca(1, 22);
