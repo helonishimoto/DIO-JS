@@ -1,10 +1,14 @@
 # Javascript Assíncrono
 
+<<<<<<< HEAD
 Este repositório contém a atividade prática do Curso "Javascript Assíncrono", que faz parte do Basecamp de Javascript [Digital Innovation One](https://digitalinnovation.one/).
+=======
+Este repositório contém a atividade prática do Curso "Javascript Assíncrono", que faz parte do Basecamp de Javascript da [Digital Innovation One](https://digitalinnovation.one/).
+>>>>>>> b1498ed017a2633c36edc4b4f8fb408606654f02
 
 ## Atividade: API "catAPI"
 
-Nesta atividade, vamos criar uma página que carrega fotos aleatórias de gatinhos sempre que clicamos em um botão.
+Nesta atividade, foi criada uma página que carrega fotos aleatórias de gatinhos sempre que clicar em um botão.
 
 1. Utilize a API `https://thatcopy.pw/catapi/rest` para fazer as chamadas com o método `fetch()`;
 2. Utilize seus conhecimentos na manipulação do DOM para criar a imagem e ativar o evento de clique do botão!
